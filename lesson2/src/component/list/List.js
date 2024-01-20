@@ -1,18 +1,18 @@
 import React from 'react';
 import Button from "./Button";
 
-const List = ({ tasks }) => {
+const List = ({ tasks, onDelete }) => {
     return (
         <div>
             <ul>
-                {tasks.map((task) => (
-                    <li key={task.id}>{task.task}</li>
+                {tasks.map(task => (
+                    <li key={task.id}>{task.task}
+                        <Button onClick={() => onDelete(task.id)} label="Удалить"/>
+                    </li>
                 ))}
             </ul>
-            <Button label="Выполнить"/>
-            <Button label="Игнорировать"/>
         </div>
-    );
+    )
 };
 
 export default List;

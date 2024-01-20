@@ -1,8 +1,11 @@
 import React from 'react';
+import './buttonStyle'
 
-const Button = ({label}) => {
+const Button = ({ onClick, label , styleClass}) => {
     return (
-        <button>{label}</button>
+        <button className={styleClass} onClick={onClick}>
+            {label}
+        </button>
     );
 };
 export default Button;
