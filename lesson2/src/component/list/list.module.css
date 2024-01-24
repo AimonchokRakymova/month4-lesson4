@@ -1,5 +1,6 @@
 .list {
     width: 600px;
-    height: 100px;
+    height: auto;
     border: 1px solid darkred;
+    background-color: lightgrey;
 }
